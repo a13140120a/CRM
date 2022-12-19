@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Log;
 
 class LoginController extends Controller  
 {
+
+    public function redirectToLogin()
+    {
+        return redirect()->route('admin.login');
+    }
         /**
      * Store a newly created resource in storage.
      * 驗證 email 格式，password required
@@ -16,7 +21,7 @@ class LoginController extends Controller
      */
     //post login
     // public function store(Request $request)
-    public function store()
+    public function login()
     {
 
         Log::info("============= user login: =============");
