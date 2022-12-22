@@ -24,5 +24,8 @@ Route::get('/', [LoginController::class, 'redirectToLogin']);
 Route::group(['prefix' => 'admin'], function () {
     //login post route to admin auth controller
     Route::post('login', [LoginController::class, 'login'])->name('admin.login');
+
+    Route::get('verifyToken', [LoginController::class, 'TokenVerify'])->name('admin.verify');
+
 });
 
