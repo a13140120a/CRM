@@ -14,19 +14,36 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('users')->delete();
-
         DB::table('users')->insert([
             'id'              => 1,
             'name'            => 'Example Admin',
             'email'           => 'admin@example.com',
-            'password'        => bcrypt('admin123'), 
-            'created_at'      => date('Y-m-d H:i:s'),
-            'updated_at'      => date('Y-m-d H:i:s'),
+            'password'        => bcrypt('admin123'),
             'status'          => 1,
-            // 'api_token'       => Str::random(80),
             // 'role_id'         => 1,
             // 'view_permission' => 'global',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'hello',
+            'email' => 'shindt1969@gmail.com',
+            'password' => bcrypt('1234'),
+            // 'role_id' => '1',
+            // 'view_permission' => "global"
+        ]);
+        DB::table('users')->insert([
+            'name' => 'hello',
+            'email' => 'shindt4969@gmail.com',
+            'password' => bcrypt('1234'),
+            // 'role_id' => '1',
+            // 'view_permission' => "global"
+        ]);
+        DB::table('users')->insert([
+            'name' => 'hello',
+            'email' => 'shindt6969@gmail.com',
+            'password' => bcrypt('1234'),
+            // 'role_id' => '1',
+            // 'view_permission' => "global"
         ]);
     }
 }
